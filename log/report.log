@@ -1,0 +1,35 @@
+[ Bus generator] TRACE root  - Bus{number='2227', passenger=1} drove to a stop
+[ Bus generator] TRACE root  - Bus{number='6918', passenger=2} drove to a stop
+[ Bus generator] TRACE root  - Bus{number='7109', passenger=7} drove to a stop
+[ Bus generator] TRACE root  - Bus{number='2430', passenger=4} waiting for a place
+[Thread-1] TRACE root  - Bus{number='2227', passenger=1} started loading
+[ Bus generator] TRACE root  - Bus{number='7175', passenger=6} drove to a stop
+[ Bus generator] TRACE root  - Bus{number='4118', passenger=8} waiting for a place
+[Thread-1] TRACE root  - 2 loaded Bus{number='2227', passenger=2}
+[Thread-1] TRACE root  - 3 loaded Bus{number='2227', passenger=3}
+[Thread-1] TRACE root  - 4 loaded Bus{number='2227', passenger=4}
+[Thread-1] TRACE root  - 5 loaded Bus{number='2227', passenger=5}
+[Thread-1] TRACE root  - 6 loaded Bus{number='2227', passenger=6}
+[Thread-1] TRACE root  - 7 loaded Bus{number='2227', passenger=7}
+[Thread-1] TRACE root  - 8 loaded Bus{number='2227', passenger=8}
+[Thread-1] TRACE root  - 9 loaded Bus{number='2227', passenger=9}
+[Thread-1] TRACE root  - 10 loaded Bus{number='2227', passenger=10}
+[Thread-1] TRACE root  - Bus{number='6918', passenger=2} started loading
+[Thread-1] TRACE root  - 3 loaded Bus{number='6918', passenger=3}
+[Thread-1] TRACE root  - 4 loaded Bus{number='6918', passenger=4}
+[Thread-1] TRACE root  - 5 loaded Bus{number='6918', passenger=5}
+[Thread-1] TRACE root  - 6 loaded Bus{number='6918', passenger=6}
+[Thread-1] TRACE root  - 7 loaded Bus{number='6918', passenger=7}
+[Thread-1] TRACE root  - 8 loaded Bus{number='6918', passenger=8}
+[Thread-1] TRACE root  - 9 loaded Bus{number='6918', passenger=9}
+[Thread-1] TRACE root  - 10 loaded Bus{number='6918', passenger=10}
+[Thread-1] TRACE root  - Bus{number='7109', passenger=7} started loading
+[Thread-1] TRACE root  - 8 loaded Bus{number='7109', passenger=8}
+[Thread-1] TRACE root  - 9 loaded Bus{number='7109', passenger=9}
+[Thread-1] TRACE root  - 10 loaded Bus{number='7109', passenger=10}
+[Thread-1] TRACE root  - Bus{number='7175', passenger=6} started loading
+[Thread-1] TRACE root  - 7 loaded Bus{number='7175', passenger=7}
+[Thread-1] TRACE root  - 8 loaded Bus{number='7175', passenger=8}
+[Thread-1] TRACE root  - 9 loaded Bus{number='7175', passenger=9}
+[Thread-1] TRACE root  - 10 loaded Bus{number='7175', passenger=10}
+[Thread-1] TRACE root  - busStop is empty

@@ -1,7 +1,7 @@
 package by.epam.javatraining.aksenov.task5.controller;
 
-import by.epam.javatraining.aksenov.task5.model.entity.BusGenerator;
-import by.epam.javatraining.aksenov.task5.model.entity.BusLoader;
+import by.epam.javatraining.aksenov.task5.util.BusGenerator;
+import by.epam.javatraining.aksenov.task5.model.logic.BusLoader;
 import by.epam.javatraining.aksenov.task5.model.entity.BusStop;
 
 public class Main {

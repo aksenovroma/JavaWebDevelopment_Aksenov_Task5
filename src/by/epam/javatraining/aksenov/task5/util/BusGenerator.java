@@ -1,4 +1,7 @@
-package by.epam.javatraining.aksenov.task5.model.entity;
+package by.epam.javatraining.aksenov.task5.util;
+
+import by.epam.javatraining.aksenov.task5.model.entity.Bus;
+import by.epam.javatraining.aksenov.task5.model.entity.BusStop;
 
 import java.util.Random;
 

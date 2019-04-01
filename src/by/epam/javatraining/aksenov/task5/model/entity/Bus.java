@@ -1,5 +1,8 @@
 package by.epam.javatraining.aksenov.task5.model.entity;
 
+import by.epam.javatraining.aksenov.task5.model.exception.BusNumberWrongArgumentException;
+import by.epam.javatraining.aksenov.task5.model.exception.BusPassengerWrongArgumentException;
+
 public class Bus {
     private String number;
     private int passenger;
@@ -13,7 +16,10 @@ public class Bus {
         return number;
     }
 
-    public void setNumber(String number) {
+    public void setNumber(String number) throws BusNumberWrongArgumentException{
+        if (number == null) {
+            throw new BusNumberWrongArgumentException();
+        }
         this.number = number;
     }
 
@@ -29,10 +35,15 @@ public class Bus {
     }
 
     public void addPassenger(int passenger) {
-        this.passenger += passenger;
+        if (passenger >= 0) {
+            this.passenger += passenger;
+        }
     }
 
-    public void setPassenger(int passenger) {
+    public void setPassenger(int passenger) throws BusPassengerWrongArgumentException{
+        if (passenger < 0) {
+            throw new BusPassengerWrongArgumentException();
+        }
         this.passenger = passenger;
     }
 

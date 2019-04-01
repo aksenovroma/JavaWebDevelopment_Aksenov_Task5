@@ -1,10 +1,18 @@
-package by.epam.javatraining.aksenov.task5.model.entity;
+package by.epam.javatraining.aksenov.task5.model.logic;
+
+import by.epam.javatraining.aksenov.task5.model.entity.Bus;
+import by.epam.javatraining.aksenov.task5.model.entity.BusStop;
+import org.apache.log4j.Logger;
 
 public class BusLoader implements Runnable {
+    private static final Logger log = Logger.getRootLogger();
+
     private BusStop busStop;
 
     public BusLoader(BusStop busStop) {
-        this.busStop = busStop;
+        if (busStop != null) {
+            this.busStop = busStop;
+        }
     }
 
     @Override
@@ -19,13 +27,13 @@ public class BusLoader implements Runnable {
                 if (bus != null) {
                     while (bus.checkPassenger()) {
                         bus.addPassenger(1);
-                        System.out.println(bus.getPassenger() + " Loaded " + bus);
+                        log.trace(bus.getPassenger() + " loaded " + bus);
                     }
                 } else {
                     flag = false;
                 }
             } catch (InterruptedException e) {
-                e.printStackTrace();
+                log.error(e);
             }
         }
     }

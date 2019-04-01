@@ -1,10 +1,14 @@
 package by.epam.javatraining.aksenov.task5.model.entity;
 
+import org.apache.log4j.Logger;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.CopyOnWriteArrayList;
 
 public class BusStop {
+    private static final Logger log = Logger.getRootLogger();
+
     private static final int MAX_BUS = 3;
     private static final int MIN_BUS = 0;
 
@@ -19,14 +23,14 @@ public class BusStop {
             if (busStop.size() < MAX_BUS) {
                 notifyAll();
                 busStop.add(bus);
-                System.out.println(bus + " added");
+                log.trace(bus + " drove to a stop");
             } else {
-                System.out.println(bus + " wait");
+                log.trace(bus + " waiting for a place");
                 wait();
                 return false;
             }
         } catch (InterruptedException e) {
-            e.printStackTrace();
+            log.error(e);
         }
         return true;
     }
@@ -36,13 +40,12 @@ public class BusStop {
         if (busStop.size() > MIN_BUS) {
             notifyAll();
             for (Bus busFromStop : busStop) {
-                System.out.println(busFromStop + " taken");
+                log.trace(busFromStop + " started loading");
                 busStop.remove(busFromStop);
                 return busFromStop;
             }
         }
-        System.out.println("busStop is empty");
-
+        log.trace("busStop is empty");
 
         return null;
     }
