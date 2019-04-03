@@ -1,39 +1,56 @@
 package by.epam.javatraining.aksenov.task5.util;
 
-import by.epam.javatraining.aksenov.task5.model.entity.Bus;
-import by.epam.javatraining.aksenov.task5.model.entity.BusStop;
+import by.epam.javatraining.aksenov.task5.model.entity.*;
+import org.apache.log4j.Logger;
 
-import java.util.Random;
+import java.util.*;
+import java.util.concurrent.locks.ReentrantLock;
 
-public class BusGenerator implements Runnable {
-    private BusStop busStop;
-    private int busCount;
+public class BusGenerator {
+    private static final Logger LOGGER = Logger.getRootLogger();
 
-    public BusGenerator(BusStop busStop, int busCount) {
-        this.busStop = busStop;
-        this.busCount = busCount;
-    }
+    private static TransportType transportType = getRandomTransportType();
+    private static FuelType fuelType = getRandomFuelType();
 
-    @Override
-    public void run() {
-        for (int i = 0; i < busCount; i++) {
-            Thread.currentThread().setName(" Bus generator");
-            busStop.add(new Bus(getRandomNumber(), getRandomPassenger()));
+    public static void generate(int busCount) {
+        if (busCount > 0) {
+            LOGGER.trace("Transport generation");
+            FuelСolumn fuelСolumn = new FuelСolumn(new FuelTank(100, 10), fuelType);
+
+            ReentrantLock reentrantLock = new ReentrantLock();
+
+            for (int i = 0; i < busCount; i++) {
+                Transport transport = new Transport(getRandomNumber(),
+                        transportType, getRandomFuelType(),
+                        new FuelTank(transportType.getCapacity(), getRandomFuelVolume()),
+                        fuelСolumn, reentrantLock);
+                new Thread(transport).start();
+            }
         }
     }
 
-    private String getRandomNumber() {
+    private static String getRandomNumber() {
         Random random = new Random();
         int number = random.nextInt(10000);
 
         if (number < 1000) {
             number *= 10;
         }
-        return Integer.toString(number);
+        return number + "-" + (random.nextInt(7) + 1);
     }
 
-    private int getRandomPassenger() {
+    private static TransportType getRandomTransportType() {
         Random random = new Random();
-        return random.nextInt(11);
+        return TransportType.values()[random.nextInt(TransportType.values().length)];
+    }
+
+    private static int getRandomFuelVolume() {
+        Random random = new Random();
+        return random.nextInt(transportType.getCapacity());
+    }
+
+    private static FuelType getRandomFuelType() {
+        Random random = new Random();
+        return FuelType.values()[random.nextInt(FuelType.values().length)];
     }
 }

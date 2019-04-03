@@ -1,35 +1,482 @@
-[ Bus generator] TRACE root  - Bus{number='2227', passenger=1} drove to a stop
-[ Bus generator] TRACE root  - Bus{number='6918', passenger=2} drove to a stop
-[ Bus generator] TRACE root  - Bus{number='7109', passenger=7} drove to a stop
-[ Bus generator] TRACE root  - Bus{number='2430', passenger=4} waiting for a place
-[Thread-1] TRACE root  - Bus{number='2227', passenger=1} started loading
-[ Bus generator] TRACE root  - Bus{number='7175', passenger=6} drove to a stop
-[ Bus generator] TRACE root  - Bus{number='4118', passenger=8} waiting for a place
-[Thread-1] TRACE root  - 2 loaded Bus{number='2227', passenger=2}
-[Thread-1] TRACE root  - 3 loaded Bus{number='2227', passenger=3}
-[Thread-1] TRACE root  - 4 loaded Bus{number='2227', passenger=4}
-[Thread-1] TRACE root  - 5 loaded Bus{number='2227', passenger=5}
-[Thread-1] TRACE root  - 6 loaded Bus{number='2227', passenger=6}
-[Thread-1] TRACE root  - 7 loaded Bus{number='2227', passenger=7}
-[Thread-1] TRACE root  - 8 loaded Bus{number='2227', passenger=8}
-[Thread-1] TRACE root  - 9 loaded Bus{number='2227', passenger=9}
-[Thread-1] TRACE root  - 10 loaded Bus{number='2227', passenger=10}
-[Thread-1] TRACE root  - Bus{number='6918', passenger=2} started loading
-[Thread-1] TRACE root  - 3 loaded Bus{number='6918', passenger=3}
-[Thread-1] TRACE root  - 4 loaded Bus{number='6918', passenger=4}
-[Thread-1] TRACE root  - 5 loaded Bus{number='6918', passenger=5}
-[Thread-1] TRACE root  - 6 loaded Bus{number='6918', passenger=6}
-[Thread-1] TRACE root  - 7 loaded Bus{number='6918', passenger=7}
-[Thread-1] TRACE root  - 8 loaded Bus{number='6918', passenger=8}
-[Thread-1] TRACE root  - 9 loaded Bus{number='6918', passenger=9}
-[Thread-1] TRACE root  - 10 loaded Bus{number='6918', passenger=10}
-[Thread-1] TRACE root  - Bus{number='7109', passenger=7} started loading
-[Thread-1] TRACE root  - 8 loaded Bus{number='7109', passenger=8}
-[Thread-1] TRACE root  - 9 loaded Bus{number='7109', passenger=9}
-[Thread-1] TRACE root  - 10 loaded Bus{number='7109', passenger=10}
-[Thread-1] TRACE root  - Bus{number='7175', passenger=6} started loading
-[Thread-1] TRACE root  - 7 loaded Bus{number='7175', passenger=7}
-[Thread-1] TRACE root  - 8 loaded Bus{number='7175', passenger=8}
-[Thread-1] TRACE root  - 9 loaded Bus{number='7175', passenger=9}
-[Thread-1] TRACE root  - 10 loaded Bus{number='7175', passenger=10}
-[Thread-1] TRACE root  - busStop is empty
+[main] TRACE root  - Генерация автобусов
+[Thread-6] TRACE root  - '9608' CITY_BUS passenger=4 подъехал к остановке, ждет
+[Thread-8] TRACE root  - '1136' TOURIST_BUS passenger=0 подъехал к остановке, ждет
+[Thread-2] TRACE root  - '7313' CITY_BUS passenger=9 подъехал к остановке, ждет
+[Thread-5] TRACE root  - '1600' MINI_BUS passenger=1 подъехал к остановке, ждет
+[Thread-0] TRACE root  - '1163' MINI_BUS passenger=6 подъехал к остановке, ждет
+[Thread-1] TRACE root  - '2654' TOURIST_BUS passenger=2 подъехал к остановке, ждет
+[Thread-3] TRACE root  - '5762' CITY_BUS passenger=5 подъехал к остановке, ждет
+[Thread-9] TRACE root  - '460' TOURIST_BUS passenger=4 подъехал к остановке, ждет
+[Thread-4] TRACE root  - '3015' CITY_BUS passenger=3 подъехал к остановке, ждет
+[Thread-7] TRACE root  - '1843' MINI_BUS passenger=9 подъехал к остановке, ждет
+[Thread-6] TRACE root  - '9608' CITY_BUS passenger=4 заехал на остановку
+[Thread-6] TRACE root  - 5 loaded '9608' CITY_BUS passenger=5
+[Thread-6] TRACE root  - 6 loaded '9608' CITY_BUS passenger=6
+[Thread-6] TRACE root  - 7 loaded '9608' CITY_BUS passenger=7
+[Thread-6] TRACE root  - 8 loaded '9608' CITY_BUS passenger=8
+[Thread-8] TRACE root  - '1136' TOURIST_BUS passenger=0 надоело ждать, уехал
+[Thread-7] TRACE root  - '1843' MINI_BUS passenger=9 надоело ждать, уехал
+[Thread-6] TRACE root  - 9 loaded '9608' CITY_BUS passenger=9
+[Thread-6] TRACE root  - закончились пассажиры, '9608' CITY_BUS passenger=9 уехал
+[Thread-6] TRACE root  - '9608' CITY_BUS passenger=9 загрузился и уехал
+[Thread-1] TRACE root  - '2654' TOURIST_BUS passenger=2 уехал без загрузки
+[Thread-4] TRACE root  - '3015' CITY_BUS passenger=3 уехал без загрузки
+[Thread-0] TRACE root  - '1163' MINI_BUS passenger=6 уехал без загрузки
+[Thread-3] TRACE root  - '5762' CITY_BUS passenger=5 уехал без загрузки
+[Thread-9] TRACE root  - '460' TOURIST_BUS passenger=4 уехал без загрузки
+[main] TRACE root  - Генерация автобусов
+[Thread-3] TRACE root  - '6770' MINI_BUS passenger=5 подъехал к остановке, ждет
+[Thread-0] TRACE root  - '2192' CITY_BUS passenger=9 подъехал к остановке, ждет
+[Thread-4] TRACE root  - '2536' MINI_BUS passenger=7 подъехал к остановке, ждет
+[Thread-2] TRACE root  - '4137' CITY_BUS passenger=7 подъехал к остановке, ждет
+[Thread-1] TRACE root  - '1652' MINI_BUS passenger=5 подъехал к остановке, ждет
+[Thread-3] TRACE root  - '6770' MINI_BUS passenger=5 заехал на остановку
+[Thread-3] TRACE root  - '6770' MINI_BUS passenger=5 загрузился и уехал
+[Thread-4] TRACE root  - '2536' MINI_BUS passenger=7 заехал на остановку
+[Thread-4] TRACE root  - '2536' MINI_BUS passenger=7 загрузился и уехал
+[Thread-2] TRACE root  - '4137' CITY_BUS passenger=7 надоело ждать, уехал
+[Thread-0] TRACE root  - '2192' CITY_BUS passenger=9 заехал на остановку
+[Thread-0] TRACE root  - 10 loaded '2192' CITY_BUS passenger=10
+[Thread-0] TRACE root  - 11 loaded '2192' CITY_BUS passenger=11
+[Thread-1] TRACE root  - '1652' MINI_BUS passenger=5 надоело ждать, уехал
+[Thread-0] TRACE root  - 12 loaded '2192' CITY_BUS passenger=12
+[Thread-0] TRACE root  - 13 loaded '2192' CITY_BUS passenger=13
+[Thread-0] TRACE root  - 14 loaded '2192' CITY_BUS passenger=14
+[Thread-0] TRACE root  - 15 loaded '2192' CITY_BUS passenger=15
+[Thread-0] TRACE root  - '2192' CITY_BUS passenger=15 загрузился и уехал
+[main] TRACE root  - Генерация автобусов
+[Thread-1] TRACE root  - '7968' MINI_BUS passenger=3 подъехал к остановке, ждет
+[Thread-2] TRACE root  - '6080' MINI_BUS passenger=2 подъехал к остановке, ждет
+[Thread-3] TRACE root  - '3863' MINI_BUS passenger=3 подъехал к остановке, ждет
+[Thread-4] TRACE root  - '1164' MINI_BUS passenger=3 подъехал к остановке, ждет
+[Thread-0] TRACE root  - '9962' MINI_BUS passenger=3 подъехал к остановке, ждет
+[Thread-2] TRACE root  - '6080' MINI_BUS passenger=2 заехал на остановку
+[Thread-2] TRACE root  - 3 loaded '6080' MINI_BUS passenger=3
+[Thread-2] TRACE root  - 4 loaded '6080' MINI_BUS passenger=4
+[Thread-2] TRACE root  - 5 loaded '6080' MINI_BUS passenger=5
+[Thread-2] TRACE root  - '6080' MINI_BUS passenger=5 загрузился и уехал
+[Thread-4] TRACE root  - '1164' MINI_BUS passenger=3 надоело ждать, уехал
+[Thread-1] TRACE root  - '7968' MINI_BUS passenger=3 надоело ждать, уехал
+[Thread-3] TRACE root  - '3863' MINI_BUS passenger=3 заехал на остановку
+[Thread-3] TRACE root  - 4 loaded '3863' MINI_BUS passenger=4
+[Thread-3] TRACE root  - 5 loaded '3863' MINI_BUS passenger=5
+[Thread-3] TRACE root  - '3863' MINI_BUS passenger=5 загрузился и уехал
+[Thread-0] TRACE root  - '9962' MINI_BUS passenger=3 надоело ждать, уехал
+[main] TRACE root  - Transport generation
+[Thread-3] TRACE root  - <7570-31> MOTORBIKE fuel=2 waiting near fuel column
+[Thread-1] TRACE root  - <8140-61> MOTORBIKE fuel=4 waiting near fuel column
+[Thread-0] TRACE root  - <3056-01> MOTORBIKE fuel=2 waiting near fuel column
+[Thread-4] TRACE root  - <1985-31> MOTORBIKE fuel=4 waiting near fuel column
+[Thread-2] TRACE root  - <150-61> MOTORBIKE fuel=2 waiting near fuel column
+[Thread-1] TRACE root  - <8140-61> MOTORBIKE fuel=4 drove to the gas station
+[Thread-1] TRACE root  - 5(l) fuel in the tank <8140-61> MOTORBIKE fuel=5
+[Thread-1] TRACE root  - <8140-61> MOTORBIKE fuel=5 refueled and left
+[Thread-4] TRACE root  - <1985-31> MOTORBIKE fuel=4 left, waiting time is over
+[Thread-0] TRACE root  - <3056-01> MOTORBIKE fuel=2 drove to the gas station
+[Thread-0] TRACE root  - 3(l) fuel in the tank <3056-01> MOTORBIKE fuel=3
+[Thread-0] TRACE root  - 4(l) fuel in the tank <3056-01> MOTORBIKE fuel=4
+[Thread-2] TRACE root  - <150-61> MOTORBIKE fuel=2 left, waiting time is over
+[Thread-0] TRACE root  - 5(l) fuel in the tank <3056-01> MOTORBIKE fuel=5
+[Thread-0] TRACE root  - <3056-01> MOTORBIKE fuel=5 refueled and left
+[Thread-3] TRACE root  - <7570-31> MOTORBIKE fuel=2 left, waiting time is over
+[main] TRACE root  - Transport generation
+[Thread-4] TRACE root  - <3768-01> BUS fuel=7 waiting near fuel column
+[Thread-0] TRACE root  - <8802-51> BUS fuel=8 waiting near fuel column
+[Thread-2] TRACE root  - <5803-51> BUS fuel=5 waiting near fuel column
+[Thread-3] TRACE root  - <7851-21> BUS fuel=12 waiting near fuel column
+[Thread-1] TRACE root  - <8661-61> BUS fuel=10 waiting near fuel column
+[Thread-4] TRACE root  - <3768-01> BUS fuel=7 drove to the gas station
+[Thread-4] TRACE root  - 8(l) fuel in the tank <3768-01> BUS fuel=8
+[Thread-4] TRACE root  - 9(l) fuel in the tank <3768-01> BUS fuel=9
+[Thread-4] TRACE root  - 10(l) fuel in the tank <3768-01> BUS fuel=10
+[Thread-4] TRACE root  - 11(l) fuel in the tank <3768-01> BUS fuel=11
+[Thread-0] TRACE root  - <8802-51> BUS fuel=8 left, waiting time is over
+
+[Thread-4] TRACE root  - 12(l) fuel in the tank <3768-01> BUS fuel=12
+[Thread-4] TRACE root  - 13(l) fuel in the tank <3768-01> BUS fuel=13
+[Thread-4] TRACE root  - 14(l) fuel in the tank <3768-01> BUS fuel=14
+[Thread-4] TRACE root  - 15(l) fuel in the tank <3768-01> BUS fuel=15
+[Thread-4] TRACE root  - <3768-01> BUS fuel=15 refueled and left
+
+[Thread-2] TRACE root  - <5803-51> BUS fuel=5 left, waiting time is over
+
+[Thread-1] TRACE root  - <8661-61> BUS fuel=10 left, waiting time is over
+
+[Thread-3] TRACE root  - <7851-21> BUS fuel=12 drove to the gas station
+[Thread-3] TRACE root  - 13(l) fuel in the tank <7851-21> BUS fuel=13
+[Thread-3] TRACE root  - 14(l) fuel in the tank <7851-21> BUS fuel=14
+[Thread-3] TRACE root  - fuel is over, <7851-21> BUS fuel=14 drove away
+
+[Thread-3] TRACE root  - <7851-21> BUS fuel=14 refueled and left
+
+[main] TRACE root  - Transport generation
+[Thread-3] TRACE root  - [CAR <6521-01>  fuel=6] waiting near fuel column
+[Thread-0] TRACE root  - [CAR <6782-11>  fuel=2] waiting near fuel column
+[Thread-1] TRACE root  - [CAR <7362-61>  fuel=1] waiting near fuel column
+[Thread-2] TRACE root  - [CAR <4349-51>  fuel=6] waiting near fuel column
+[Thread-4] TRACE root  - [CAR <6767-61>  fuel=8] waiting near fuel column
+[Thread-3] TRACE root  - [CAR <6521-01>  fuel=6] drove to the gas station
+[Thread-3] TRACE root  - 7(l) fuel in the tank [CAR <6521-01>  fuel=7]
+[Thread-3] TRACE root  - 8(l) fuel in the tank [CAR <6521-01>  fuel=8]
+[Thread-3] TRACE root  - 9(l) fuel in the tank [CAR <6521-01>  fuel=9]
+[Thread-3] TRACE root  - 10(l) fuel in the tank [CAR <6521-01>  fuel=10]
+[Thread-3] TRACE root  - [CAR <6521-01>  fuel=10] refueled and left
+
+[Thread-0] TRACE root  - [CAR <6782-11>  fuel=2] drove to the gas station
+[Thread-0] TRACE root  - 3(l) fuel in the tank [CAR <6782-11>  fuel=3]
+[Thread-0] TRACE root  - 4(l) fuel in the tank [CAR <6782-11>  fuel=4]
+[Thread-0] TRACE root  - 5(l) fuel in the tank [CAR <6782-11>  fuel=5]
+[Thread-0] TRACE root  - 6(l) fuel in the tank [CAR <6782-11>  fuel=6]
+[Thread-2] TRACE root  - [CAR <4349-51>  fuel=6] left, waiting time is over
+
+[Thread-4] TRACE root  - [CAR <6767-61>  fuel=8] left, waiting time is over
+
+[Thread-1] TRACE root  - [CAR <7362-61>  fuel=1] left, waiting time is over
+
+[Thread-0] TRACE root  - 7(l) fuel in the tank [CAR <6782-11>  fuel=7]
+[Thread-0] TRACE root  - 8(l) fuel in the tank [CAR <6782-11>  fuel=8]
+[Thread-0] TRACE root  - fuel is over, [CAR <6782-11>  fuel=8] drove away
+
+[Thread-0] TRACE root  - [CAR <6782-11>  fuel=8] refueled and left
+
+[main] TRACE root  - Transport generation
+[Thread-0] TRACE root  - [CAR <2908-41>  fuel=4] waiting near fuel column
+[Thread-1] TRACE root  - [CAR <5371-51>  fuel=7] waiting near fuel column
+[Thread-2] TRACE root  - [CAR <3135-01>  fuel=1] waiting near fuel column
+[Thread-3] TRACE root  - [CAR <9855-01>  fuel=9] waiting near fuel column
+[Thread-4] TRACE root  - [CAR <2831-61>  fuel=1] waiting near fuel column
+[Thread-0] TRACE root  - 
+[CAR <2908-41>  fuel=4] drove to the gas station
+[Thread-0] TRACE root  - 5(l) fuel in the tank [CAR <2908-41>  fuel=5]
+[Thread-0] TRACE root  - 6(l) fuel in the tank [CAR <2908-41>  fuel=6]
+[Thread-0] TRACE root  - 7(l) fuel in the tank [CAR <2908-41>  fuel=7]
+[Thread-0] TRACE root  - 8(l) fuel in the tank [CAR <2908-41>  fuel=8]
+[Thread-1] TRACE root  - 
+[CAR <5371-51>  fuel=7] left, waiting time is over
+[Thread-0] TRACE root  - 9(l) fuel in the tank [CAR <2908-41>  fuel=9]
+[Thread-0] TRACE root  - 10(l) fuel in the tank [CAR <2908-41>  fuel=10]
+[Thread-0] TRACE root  - 
+[CAR <2908-41>  fuel=10] refueled and left
+[Thread-4] TRACE root  - 
+[CAR <2831-61>  fuel=1] left, waiting time is over
+[Thread-2] TRACE root  - 
+[CAR <3135-01>  fuel=1] drove to the gas station
+[Thread-2] TRACE root  - 2(l) fuel in the tank [CAR <3135-01>  fuel=2]
+[Thread-2] TRACE root  - 3(l) fuel in the tank [CAR <3135-01>  fuel=3]
+[Thread-3] TRACE root  - 
+[CAR <9855-01>  fuel=9] left, waiting time is over
+[Thread-2] TRACE root  - 4(l) fuel in the tank [CAR <3135-01>  fuel=4]
+[Thread-2] TRACE root  - 5(l) fuel in the tank [CAR <3135-01>  fuel=5]
+[Thread-2] TRACE root  - 
+ + fuel is over, [CAR <3135-01>  fuel=5] drove away
+[Thread-2] TRACE root  - 
+[CAR <3135-01>  fuel=5] refueled and left
+[main] TRACE root  - Transport generation
+[Thread-0] TRACE root  - [BUS <4445-01>  fuel=0] waiting near fuel column
+[Thread-4] TRACE root  - [BUS <9215-11>  fuel=1] waiting near fuel column
+[Thread-1] TRACE root  - [BUS <2964-21>  fuel=3] waiting near fuel column
+[Thread-3] TRACE root  - [BUS <9308-01>  fuel=9] waiting near fuel column
+[Thread-2] TRACE root  - [BUS <9355-11>  fuel=7] waiting near fuel column
+[Thread-0] TRACE root  - 
+[BUS <4445-01>  fuel=0] drove to the gas station
+[Thread-0] TRACE root  - 1(l) fuel in the tank [BUS <4445-01>  fuel=1]
+[Thread-0] TRACE root  - 2(l) fuel in the tank [BUS <4445-01>  fuel=2]
+[Thread-0] TRACE root  - 3(l) fuel in the tank [BUS <4445-01>  fuel=3]
+[Thread-0] TRACE root  - 4(l) fuel in the tank [BUS <4445-01>  fuel=4]
+[Thread-4] TRACE root  - 
+[BUS <9215-11>  fuel=1] left, waiting time is over
+
+[Thread-3] TRACE root  - 
+[BUS <9308-01>  fuel=9] left, waiting time is over
+
+[Thread-2] TRACE root  - 
+[BUS <9355-11>  fuel=7] left, waiting time is over
+
+[Thread-0] TRACE root  - 5(l) fuel in the tank [BUS <4445-01>  fuel=5]
+[Thread-0] TRACE root  - 6(l) fuel in the tank [BUS <4445-01>  fuel=6]
+[Thread-0] TRACE root  - 7(l) fuel in the tank [BUS <4445-01>  fuel=7]
+[Thread-1] TRACE root  - 
+[BUS <2964-21>  fuel=3] left, waiting time is over
+
+[Thread-0] TRACE root  - 8(l) fuel in the tank [BUS <4445-01>  fuel=8]
+[Thread-0] TRACE root  - 9(l) fuel in the tank [BUS <4445-01>  fuel=9]
+[Thread-0] TRACE root  - 10(l) fuel in the tank [BUS <4445-01>  fuel=10]
+[Thread-0] TRACE root  - 
+fuel is over, [BUS <4445-01>  fuel=10] drove away
+[Thread-0] TRACE root  - 
+[BUS <4445-01>  fuel=10] refueled and left
+[main] TRACE root  - Transport generation
+[Thread-0] TRACE root  - [CAR <1112-61>  fuel=3] waiting near fuel column
+[Thread-1] TRACE root  - [CAR <4866-31>  fuel=7] waiting near fuel column
+[Thread-3] TRACE root  - [CAR <2002-01>  fuel=7] waiting near fuel column
+[Thread-2] TRACE root  - [CAR <3834-51>  fuel=1] waiting near fuel column
+[Thread-4] TRACE root  - [CAR <2297-11>  fuel=8] waiting near fuel column
+[Thread-3] TRACE root  - 
+[CAR <2002-01>  fuel=7] drove to the gas station
+[Thread-3] TRACE root  - 8(l) fuel in the tank [CAR <2002-01>  fuel=8]
+[Thread-3] TRACE root  - 9(l) fuel in the tank [CAR <2002-01>  fuel=9]
+[Thread-3] TRACE root  - 10(l) fuel in the tank [CAR <2002-01>  fuel=10]
+[Thread-3] TRACE root  - 
+[CAR <2002-01>  fuel=10] refueled and left
+[Thread-1] TRACE root  - 
+[CAR <4866-31>  fuel=7] drove to the gas station
+[Thread-1] TRACE root  - 8(l) fuel in the tank [CAR <4866-31>  fuel=8]
+[Thread-1] TRACE root  - 9(l) fuel in the tank [CAR <4866-31>  fuel=9]
+[Thread-0] TRACE root  - 
+[CAR <1112-61>  fuel=3] left, waiting time is over
+
+[Thread-1] TRACE root  - 10(l) fuel in the tank [CAR <4866-31>  fuel=10]
+[Thread-1] TRACE root  - 
+[CAR <4866-31>  fuel=10] refueled and left
+[Thread-4] TRACE root  - 
+[CAR <2297-11>  fuel=8] left, waiting time is over
+
+[Thread-2] TRACE root  - 
+[CAR <3834-51>  fuel=1] drove to the gas station
+[Thread-2] TRACE root  - 2(l) fuel in the tank [CAR <3834-51>  fuel=2]
+[Thread-2] TRACE root  - 3(l) fuel in the tank [CAR <3834-51>  fuel=3]
+[Thread-2] TRACE root  - 4(l) fuel in the tank [CAR <3834-51>  fuel=4]
+[Thread-2] TRACE root  - 5(l) fuel in the tank [CAR <3834-51>  fuel=5]
+[Thread-2] TRACE root  - 
+fuel is over, [CAR <3834-51>  fuel=5] drove away
+[Thread-2] TRACE root  - 
+[CAR <3834-51>  fuel=5] refueled and left
+[main] TRACE root  - Transport generation
+[Thread-1] TRACE root  - [BUS <9219-51>  fuel=12] waiting near fuel column
+[Thread-0] TRACE root  - [BUS <5953-11>  fuel=9] waiting near fuel column
+[Thread-2] TRACE root  - [BUS <7820-11>  fuel=0] waiting near fuel column
+[Thread-3] TRACE root  - [BUS <490-61>  fuel=13] waiting near fuel column
+[Thread-4] TRACE root  - [BUS <3840-11>  fuel=4] waiting near fuel column
+[Thread-1] TRACE root  - 
+[BUS <9219-51>  fuel=12] drove to the gas station
+[Thread-1] TRACE root  - 13(l) fuel in the tank [BUS <9219-51>  fuel=13]
+[Thread-1] TRACE root  - 14(l) fuel in the tank [BUS <9219-51>  fuel=14]
+[Thread-1] TRACE root  - 15(l) fuel in the tank [BUS <9219-51>  fuel=15]
+[Thread-1] TRACE root  - 
+[BUS <9219-51>  fuel=15] refueled and left
+[Thread-2] TRACE root  - 
+[BUS <7820-11>  fuel=0] drove to the gas station
+[Thread-2] TRACE root  - 1(l) fuel in the tank [BUS <7820-11>  fuel=1]
+[Thread-2] TRACE root  - 2(l) fuel in the tank [BUS <7820-11>  fuel=2]
+[Thread-2] TRACE root  - 3(l) fuel in the tank [BUS <7820-11>  fuel=3]
+[Thread-2] TRACE root  - 4(l) fuel in the tank [BUS <7820-11>  fuel=4]
+[Thread-2] TRACE root  - 5(l) fuel in the tank [BUS <7820-11>  fuel=5]
+[Thread-3] TRACE root  - 
+[BUS <490-61>  fuel=13] left, waiting time is over
+
+[Thread-4] TRACE root  - 
+[BUS <3840-11>  fuel=4] left, waiting time is over
+
+[Thread-2] TRACE root  - 6(l) fuel in the tank [BUS <7820-11>  fuel=6]
+[Thread-2] TRACE root  - 7(l) fuel in the tank [BUS <7820-11>  fuel=7]
+[Thread-0] TRACE root  - 
+[BUS <5953-11>  fuel=9] left, not enough fuel
+[Thread-2] TRACE root  - 
+fuel is over, [BUS <7820-11>  fuel=7] drove away
+[Thread-2] TRACE root  - 
+[BUS <7820-11>  fuel=7] refueled and left
+[main] TRACE root  - Transport generation
+[Thread-3] TRACE root  - [BUS <4493-01>  fuel=12] waiting near fuel column
+[Thread-0] TRACE root  - [BUS <4813-21>  fuel=13] waiting near fuel column
+[Thread-1] TRACE root  - [BUS <6648-51>  fuel=0] waiting near fuel column
+[Thread-2] TRACE root  - [BUS <9745-41>  fuel=6] waiting near fuel column
+[Thread-4] TRACE root  - [BUS <9398-31>  fuel=2] waiting near fuel column
+[Thread-2] TRACE root  - 
+[BUS <9745-41>  fuel=6] drove to the gas station
+[Thread-2] TRACE root  - 7(l) fuel in the tank [BUS <9745-41>  fuel=7]
+[Thread-2] TRACE root  - 8(l) fuel in the tank [BUS <9745-41>  fuel=8]
+[Thread-2] TRACE root  - 9(l) fuel in the tank [BUS <9745-41>  fuel=9]
+[Thread-2] TRACE root  - 10(l) fuel in the tank [BUS <9745-41>  fuel=10]
+[Thread-2] TRACE root  - 11(l) fuel in the tank [BUS <9745-41>  fuel=11]
+[Thread-2] TRACE root  - 12(l) fuel in the tank [BUS <9745-41>  fuel=12]
+[Thread-2] TRACE root  - 13(l) fuel in the tank [BUS <9745-41>  fuel=13]
+[Thread-2] TRACE root  - 14(l) fuel in the tank [BUS <9745-41>  fuel=14]
+[Thread-2] TRACE root  - 15(l) fuel in the tank [BUS <9745-41>  fuel=15]
+[Thread-2] TRACE root  - [BUS <9745-41>  fuel=15] refueled and left
+[Thread-3] TRACE root  - 
+[BUS <4493-01>  fuel=12] left, waiting time is over
+
+[Thread-0] TRACE root  - 
+[BUS <4813-21>  fuel=13] drove to the gas station
+[Thread-0] TRACE root  - 14(l) fuel in the tank [BUS <4813-21>  fuel=14]
+[Thread-0] TRACE root  - fuel is over, [BUS <4813-21>  fuel=14] drove away
+[Thread-0] TRACE root  - [BUS <4813-21>  fuel=14] refueled and left
+[Thread-1] TRACE root  - 
+[BUS <6648-51>  fuel=0] left, not enough fuel
+[Thread-4] TRACE root  - 
+[BUS <9398-31>  fuel=2] left, not enough fuel
+[main] TRACE root  - Transport generation
+[Thread-3] TRACE root  - [BUS (GASOLINE) <7481-41>  fuel=11] waiting near fuel column
+[Thread-0] TRACE root  - [BUS (GASOLINE) <5492-31>  fuel=8] waiting near fuel column
+[Thread-4] TRACE root  - [BUS (DIESEL) <9860-61>  fuel=13] waiting near fuel column
+[Thread-2] TRACE root  - [BUS (DIESEL) <7224-01>  fuel=0] waiting near fuel column
+[Thread-1] TRACE root  - [BUS (DIESEL) <7537-61>  fuel=4] waiting near fuel column
+[Thread-3] TRACE root  - 
+[BUS (GASOLINE) <7481-41>  fuel=11] drove to the gas station
+[Thread-3] TRACE root  - 12(l) fuel in the tank [BUS (GASOLINE) <7481-41>  fuel=12]
+[Thread-3] TRACE root  - 13(l) fuel in the tank [BUS (GASOLINE) <7481-41>  fuel=13]
+[Thread-3] TRACE root  - 14(l) fuel in the tank [BUS (GASOLINE) <7481-41>  fuel=14]
+[Thread-3] TRACE root  - 15(l) fuel in the tank [BUS (GASOLINE) <7481-41>  fuel=15]
+[Thread-3] TRACE root  - [BUS (GASOLINE) <7481-41>  fuel=15] refueled and left
+[Thread-1] TRACE root  - 
+[BUS (DIESEL) <7537-61>  fuel=4] drove to the gas station
+[Thread-1] TRACE root  - 5(l) fuel in the tank [BUS (DIESEL) <7537-61>  fuel=5]
+[Thread-1] TRACE root  - 6(l) fuel in the tank [BUS (DIESEL) <7537-61>  fuel=6]
+[Thread-1] TRACE root  - 7(l) fuel in the tank [BUS (DIESEL) <7537-61>  fuel=7]
+[Thread-1] TRACE root  - 8(l) fuel in the tank [BUS (DIESEL) <7537-61>  fuel=8]
+[Thread-1] TRACE root  - 9(l) fuel in the tank [BUS (DIESEL) <7537-61>  fuel=9]
+[Thread-1] TRACE root  - 10(l) fuel in the tank [BUS (DIESEL) <7537-61>  fuel=10]
+[Thread-4] TRACE root  - 
+[BUS (DIESEL) <9860-61>  fuel=13] left, waiting time is over
+
+[Thread-1] TRACE root  - 11(l) fuel in the tank [BUS (DIESEL) <7537-61>  fuel=11]
+[Thread-1] TRACE root  - 12(l) fuel in the tank [BUS (DIESEL) <7537-61>  fuel=12]
+[Thread-1] TRACE root  - 13(l) fuel in the tank [BUS (DIESEL) <7537-61>  fuel=13]
+[Thread-0] TRACE root  - 
+[BUS (GASOLINE) <5492-31>  fuel=8] left, waiting time is over
+
+[Thread-2] TRACE root  - 
+[BUS (DIESEL) <7224-01>  fuel=0] left, waiting time is over
+
+[Thread-1] TRACE root  - 14(l) fuel in the tank [BUS (DIESEL) <7537-61>  fuel=14]
+[Thread-1] TRACE root  - 15(l) fuel in the tank [BUS (DIESEL) <7537-61>  fuel=15]
+[Thread-1] TRACE root  - [BUS (DIESEL) <7537-61>  fuel=15] refueled and left
+[main] TRACE root  - Transport generation
+[Thread-0] TRACE root  - [MOTORBIKE (GASOLINE) <7444-31>  fuel=0] waiting near fuel column
+[Thread-3] TRACE root  - [MOTORBIKE (DIESEL) <1203-41>  fuel=3] waiting near fuel column
+[Thread-2] TRACE root  - [MOTORBIKE (DIESEL) <4805-31>  fuel=3] waiting near fuel column
+[Thread-4] TRACE root  - [MOTORBIKE (DIESEL) <3556-61>  fuel=2] waiting near fuel column
+[Thread-1] TRACE root  - [MOTORBIKE (GASOLINE) <1306-41>  fuel=0] waiting near fuel column
+[Thread-2] TRACE root  - FuelСolumn{fuelTank=FuelTank{capacity=100, fuelVolume=20}, fuelType=GASOLINE}
+[Thread-2] TRACE root  - 
+[MOTORBIKE (DIESEL) <4805-31>  fuel=3] drove to the gas station
+[Thread-2] TRACE root  - 4(l) fuel in the tank [MOTORBIKE (DIESEL) <4805-31>  fuel=4]
+[Thread-2] TRACE root  - 5(l) fuel in the tank [MOTORBIKE (DIESEL) <4805-31>  fuel=5]
+[Thread-2] TRACE root  - [MOTORBIKE (DIESEL) <4805-31>  fuel=5] refueled and left
+[Thread-0] TRACE root  - FuelСolumn{fuelTank=FuelTank{capacity=100, fuelVolume=18}, fuelType=GASOLINE}
+[Thread-0] TRACE root  - 
+[MOTORBIKE (GASOLINE) <7444-31>  fuel=0] drove to the gas station
+[Thread-0] TRACE root  - 1(l) fuel in the tank [MOTORBIKE (GASOLINE) <7444-31>  fuel=1]
+[Thread-0] TRACE root  - 2(l) fuel in the tank [MOTORBIKE (GASOLINE) <7444-31>  fuel=2]
+[Thread-0] TRACE root  - 3(l) fuel in the tank [MOTORBIKE (GASOLINE) <7444-31>  fuel=3]
+[Thread-4] TRACE root  - 
+[MOTORBIKE (DIESEL) <3556-61>  fuel=2] left, waiting time is over
+
+[Thread-0] TRACE root  - 4(l) fuel in the tank [MOTORBIKE (GASOLINE) <7444-31>  fuel=4]
+[Thread-0] TRACE root  - 5(l) fuel in the tank [MOTORBIKE (GASOLINE) <7444-31>  fuel=5]
+[Thread-0] TRACE root  - [MOTORBIKE (GASOLINE) <7444-31>  fuel=5] refueled and left
+[Thread-1] TRACE root  - FuelСolumn{fuelTank=FuelTank{capacity=100, fuelVolume=13}, fuelType=GASOLINE}
+[Thread-1] TRACE root  - 
+[MOTORBIKE (GASOLINE) <1306-41>  fuel=0] drove to the gas station
+[Thread-1] TRACE root  - 1(l) fuel in the tank [MOTORBIKE (GASOLINE) <1306-41>  fuel=1]
+[Thread-1] TRACE root  - 2(l) fuel in the tank [MOTORBIKE (GASOLINE) <1306-41>  fuel=2]
+[Thread-3] TRACE root  - 
+[MOTORBIKE (DIESEL) <1203-41>  fuel=3] left, waiting time is over
+
+[Thread-1] TRACE root  - 3(l) fuel in the tank [MOTORBIKE (GASOLINE) <1306-41>  fuel=3]
+[Thread-1] TRACE root  - 4(l) fuel in the tank [MOTORBIKE (GASOLINE) <1306-41>  fuel=4]
+[Thread-1] TRACE root  - 5(l) fuel in the tank [MOTORBIKE (GASOLINE) <1306-41>  fuel=5]
+[Thread-1] TRACE root  - [MOTORBIKE (GASOLINE) <1306-41>  fuel=5] refueled and left
+[main] TRACE root  - Transport generation
+[Thread-3] TRACE root  - [CAR (GASOLINE) <6721-01>  fuel=2] waiting near fuel column
+[Thread-1] TRACE root  - [CAR (DIESEL) <570-41>  fuel=1] waiting near fuel column
+[Thread-0] TRACE root  - [CAR (DIESEL) <4142-61>  fuel=7] waiting near fuel column
+[Thread-4] TRACE root  - [CAR (DIESEL) <4529-31>  fuel=2] waiting near fuel column
+[Thread-2] TRACE root  - [CAR (GASOLINE) <4991-61>  fuel=2] waiting near fuel column
+[Thread-1] TRACE root  - FuelСolumn{GASOLINE capacity=100, fuelVolume=20}
+[Thread-1] TRACE root  - 
+[CAR (DIESEL) <570-41>  fuel=1] drove to the gas station
+[Thread-1] TRACE root  - 2(l) fuel in the tank [CAR (DIESEL) <570-41>  fuel=2]
+[Thread-1] TRACE root  - 3(l) fuel in the tank [CAR (DIESEL) <570-41>  fuel=3]
+[Thread-1] TRACE root  - 4(l) fuel in the tank [CAR (DIESEL) <570-41>  fuel=4]
+[Thread-1] TRACE root  - 5(l) fuel in the tank [CAR (DIESEL) <570-41>  fuel=5]
+[Thread-1] TRACE root  - 6(l) fuel in the tank [CAR (DIESEL) <570-41>  fuel=6]
+[Thread-1] TRACE root  - 7(l) fuel in the tank [CAR (DIESEL) <570-41>  fuel=7]
+[Thread-1] TRACE root  - 8(l) fuel in the tank [CAR (DIESEL) <570-41>  fuel=8]
+[Thread-1] TRACE root  - 9(l) fuel in the tank [CAR (DIESEL) <570-41>  fuel=9]
+[Thread-1] TRACE root  - 10(l) fuel in the tank [CAR (DIESEL) <570-41>  fuel=10]
+[Thread-4] TRACE root  - 
+[CAR (DIESEL) <4529-31>  fuel=2] left, waiting time is over
+
+[Thread-0] TRACE root  - 
+[CAR (DIESEL) <4142-61>  fuel=7] left, waiting time is over
+
+[Thread-1] TRACE root  - [CAR (DIESEL) <570-41>  fuel=10] refueled and left
+[Thread-2] TRACE root  - FuelСolumn{GASOLINE capacity=100, fuelVolume=11}
+[Thread-2] TRACE root  - 
+[CAR (GASOLINE) <4991-61>  fuel=2] drove to the gas station
+[Thread-2] TRACE root  - 3(l) fuel in the tank [CAR (GASOLINE) <4991-61>  fuel=3]
+[Thread-3] TRACE root  - 
+[CAR (GASOLINE) <6721-01>  fuel=2] left, waiting time is over
+
+[Thread-2] TRACE root  - 4(l) fuel in the tank [CAR (GASOLINE) <4991-61>  fuel=4]
+[Thread-2] TRACE root  - 5(l) fuel in the tank [CAR (GASOLINE) <4991-61>  fuel=5]
+[Thread-2] TRACE root  - 6(l) fuel in the tank [CAR (GASOLINE) <4991-61>  fuel=6]
+[Thread-2] TRACE root  - 7(l) fuel in the tank [CAR (GASOLINE) <4991-61>  fuel=7]
+[Thread-2] TRACE root  - 8(l) fuel in the tank [CAR (GASOLINE) <4991-61>  fuel=8]
+[Thread-2] TRACE root  - 9(l) fuel in the tank [CAR (GASOLINE) <4991-61>  fuel=9]
+[Thread-2] TRACE root  - 10(l) fuel in the tank [CAR (GASOLINE) <4991-61>  fuel=10]
+[Thread-2] TRACE root  - [CAR (GASOLINE) <4991-61>  fuel=10] refueled and left
+[main] TRACE root  - Transport generation
+[Thread-3] TRACE root  - [BUS (DIESEL) <7836-7>  fuel=6] waiting near fuel column
+[Thread-2] TRACE root  - [BUS (DIESEL) <4999-6>  fuel=7] waiting near fuel column
+[Thread-4] TRACE root  - [BUS (DIESEL) <1175-4>  fuel=2] waiting near fuel column
+[Thread-1] TRACE root  - [BUS (GASOLINE) <6620-5>  fuel=5] waiting near fuel column
+[Thread-2] TRACE root  - FuelСolumn{DIESEL capacity=100, fuelVolume=10}
+[Thread-0] TRACE root  - [BUS (DIESEL) <2701-5>  fuel=11] waiting near fuel column
+[Thread-2] TRACE root  - 
+[BUS (DIESEL) <4999-6>  fuel=7] drove to the gas station
+[Thread-2] TRACE root  - 8(l) fuel in the tank [BUS (DIESEL) <4999-6>  fuel=8]
+[Thread-2] TRACE root  - 9(l) fuel in the tank [BUS (DIESEL) <4999-6>  fuel=9]
+[Thread-2] TRACE root  - 10(l) fuel in the tank [BUS (DIESEL) <4999-6>  fuel=10]
+[Thread-2] TRACE root  - 11(l) fuel in the tank [BUS (DIESEL) <4999-6>  fuel=11]
+[Thread-2] TRACE root  - 12(l) fuel in the tank [BUS (DIESEL) <4999-6>  fuel=12]
+[Thread-2] TRACE root  - 13(l) fuel in the tank [BUS (DIESEL) <4999-6>  fuel=13]
+[Thread-2] TRACE root  - 14(l) fuel in the tank [BUS (DIESEL) <4999-6>  fuel=14]
+[Thread-2] TRACE root  - 15(l) fuel in the tank [BUS (DIESEL) <4999-6>  fuel=15]
+[Thread-2] TRACE root  - [BUS (DIESEL) <4999-6>  fuel=15] refueled and left
+[Thread-1] TRACE root  - 
+[BUS (GASOLINE) <6620-5>  fuel=5] left, waiting time is over
+
+[Thread-3] TRACE root  - FuelСolumn{DIESEL capacity=100, fuelVolume=2}
+[Thread-4] TRACE root  - 
+[BUS (DIESEL) <1175-4>  fuel=2] left, waiting time is over
+
+[Thread-0] TRACE root  - 
+[BUS (DIESEL) <2701-5>  fuel=11] left, waiting time is over
+
+[Thread-3] TRACE root  - 
+[BUS (DIESEL) <7836-7>  fuel=6] drove to the gas station
+[Thread-3] TRACE root  - 7(l) fuel in the tank [BUS (DIESEL) <7836-7>  fuel=7]
+[Thread-3] TRACE root  - 8(l) fuel in the tank [BUS (DIESEL) <7836-7>  fuel=8]
+[Thread-3] TRACE root  - fuel is over, [BUS (DIESEL) <7836-7>  fuel=8] drove away
+[Thread-3] TRACE root  - [BUS (DIESEL) <7836-7>  fuel=8] refueled and left
+[main] TRACE root  - Transport generation
+[Thread-3] TRACE root  - [MOTORBIKE (DIESEL) <3239-7>  fuel=3] waiting near fuel column
+[Thread-1] TRACE root  - [MOTORBIKE (DIESEL) <2989-3>  fuel=4] waiting near fuel column
+[Thread-4] TRACE root  - [MOTORBIKE (DIESEL) <6179-4>  fuel=3] waiting near fuel column
+[Thread-4] TRACE root  - FuelСolumn{GASOLINE capacity=100, fuelVolume=10}
+[Thread-2] TRACE root  - [MOTORBIKE (GASOLINE) <2316-7>  fuel=1] waiting near fuel column
+[Thread-0] TRACE root  - [MOTORBIKE (GASOLINE) <4461-3>  fuel=1] waiting near fuel column
+[Thread-4] TRACE root  - 
+[MOTORBIKE (DIESEL) <6179-4>  fuel=3] drove to the gas station
+[Thread-4] TRACE root  - 4(l) fuel in the tank [MOTORBIKE (DIESEL) <6179-4>  fuel=4]
+[Thread-4] TRACE root  - 5(l) fuel in the tank [MOTORBIKE (DIESEL) <6179-4>  fuel=5]
+[Thread-4] TRACE root  - [MOTORBIKE (DIESEL) <6179-4>  fuel=5] refueled and left
+[Thread-3] TRACE root  - FuelСolumn{GASOLINE capacity=100, fuelVolume=8}
+[Thread-3] TRACE root  - 
+[MOTORBIKE (DIESEL) <3239-7>  fuel=3] drove to the gas station
+[Thread-3] TRACE root  - 4(l) fuel in the tank [MOTORBIKE (DIESEL) <3239-7>  fuel=4]
+[Thread-3] TRACE root  - 5(l) fuel in the tank [MOTORBIKE (DIESEL) <3239-7>  fuel=5]
+[Thread-3] TRACE root  - [MOTORBIKE (DIESEL) <3239-7>  fuel=5] refueled and left
+[Thread-1] TRACE root  - FuelСolumn{GASOLINE capacity=100, fuelVolume=6}
+[Thread-2] TRACE root  - 
+[MOTORBIKE (GASOLINE) <2316-7>  fuel=1] left, waiting time is over
+
+[Thread-1] TRACE root  - 
+[MOTORBIKE (DIESEL) <2989-3>  fuel=4] drove to the gas station
+[Thread-1] TRACE root  - 5(l) fuel in the tank [MOTORBIKE (DIESEL) <2989-3>  fuel=5]
+[Thread-1] TRACE root  - [MOTORBIKE (DIESEL) <2989-3>  fuel=5] refueled and left
+[Thread-0] TRACE root  - 
+[MOTORBIKE (GASOLINE) <4461-3>  fuel=1] left, waiting time is over
+
