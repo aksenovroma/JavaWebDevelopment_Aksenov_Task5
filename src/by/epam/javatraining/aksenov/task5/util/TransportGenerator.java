@@ -6,17 +6,25 @@ import org.apache.log4j.Logger;
 import java.util.*;
 import java.util.concurrent.locks.ReentrantLock;
 
+import static properties.ProjectProperties.*;
+
 public class TransportGenerator {
     private static final Logger LOGGER = Logger.getRootLogger();
 
     private static TransportType transportType = getRandomTransportType();
 
+    private static final String MESSAGE_GENERATION = "Transport generation";
+
     public static void generate(int busCount) {
         if (busCount > 0) {
-            LOGGER.trace("Transport generation");
+            LOGGER.trace(MESSAGE_GENERATION);
 
-            FuelColumn dieselFuelColumn = new FuelColumn(new FuelTank(100, 10), FuelType.DIESEL);
-            FuelColumn gasolineFuelColumn = new FuelColumn(new FuelTank(100, 10), FuelType.GASOLINE);
+            FuelColumn dieselFuelColumn = new FuelColumn(new FuelTank(FUEL_COLOMN_CAPACITY,
+                    FUEL_COLOMN_DIESEL_FUEL_VOLUME),
+                    FuelType.DIESEL);
+            FuelColumn gasolineFuelColumn = new FuelColumn(new FuelTank(FUEL_COLOMN_CAPACITY,
+                    FUEL_COLOMN_GASOLINE_FUEL_VOLUME),
+                    FuelType.GASOLINE);
 
             List<FuelColumn> fuelColumns = new LinkedList<>() {
                 {
@@ -30,8 +38,12 @@ public class TransportGenerator {
             ReentrantLock reentrantLock = new ReentrantLock();
 
             for (int i = 0; i < busCount; i++) {
-                Transport transport = new Transport(getRandomNumber(), transportType, getRandomFuelType(),
-                        new FuelTank(transportType.getCapacity(), getRandomFuelVolume()), gasStation, reentrantLock);
+                Transport transport = new Transport(getRandomNumber(),
+                        transportType,
+                        getRandomFuelType(),
+                        new FuelTank(transportType.getCapacity(), getRandomFuelVolume()),
+                        gasStation,
+                        reentrantLock);
                 new Thread(transport).start();
             }
         }

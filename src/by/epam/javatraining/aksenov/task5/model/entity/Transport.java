@@ -7,12 +7,14 @@ import java.util.Random;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.locks.ReentrantLock;
 
+import static properties.ProjectProperties.TIMEOUT_TRANSPORT;
+
 public class Transport implements Runnable{
-    private static final Logger LOGGER = Logger.getRootLogger();
+    private static final Logger LOGGER = Logger.getLogger(Transport.class);
 
     private static final int MIN_WAIT_TIME = 6;
     private static final int MAX_WAIT_TIME = 8;
-    private static final int TIMEOUT_TRANSPORT = 1;
+
     private static final String DEFAULT_NUMBER = "1234-5";
     private static final String MESSAGE_WAIT = " waiting near fuel column";
     private static final String MESSAGE_LEFT_NOT_ENOUGH_FUEL = " left, not enough fuel";
@@ -74,7 +76,7 @@ public class Transport implements Runnable{
             if (locker.tryLock(waitTime, TimeUnit.SECONDS)) {
                 try {
                     if (!fuelColumn.getFuelTank().isEmpty()) {
-                        fuelColumn.fuel(this);
+                        fuelColumn.add(this);
                     }
                     TimeUnit.SECONDS.sleep(TIMEOUT_TRANSPORT);
                 } finally {

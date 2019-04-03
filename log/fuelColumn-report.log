@@ -1,0 +1,12 @@
+[Thread-4] - 
+FuelСolumn{DIESEL capacity=100.0, fuelVolume=10.0}
+[MOTORBIKE (DIESEL) <6880-2>  fuel=2.0] drove to the gas station
+[Thread-4] - [MOTORBIKE (DIESEL) <6880-2>  fuel=5.0] refueled and left FuelСolumn{DIESEL capacity=100.0, fuelVolume=7.0}
+[Thread-1] - 
+FuelСolumn{GASOLINE capacity=100.0, fuelVolume=10.0}
+[MOTORBIKE (GASOLINE) <3983-2>  fuel=2.0] drove to the gas station
+[Thread-1] - [MOTORBIKE (GASOLINE) <3983-2>  fuel=5.0] refueled and left FuelСolumn{GASOLINE capacity=100.0, fuelVolume=7.0}
+[Thread-2] - 
+FuelСolumn{GASOLINE capacity=100.0, fuelVolume=7.0}
+[MOTORBIKE (GASOLINE) <9623-4>  fuel=4.0] drove to the gas station
+[Thread-2] - [MOTORBIKE (GASOLINE) <9623-4>  fuel=5.0] refueled and left FuelСolumn{GASOLINE capacity=100.0, fuelVolume=6.0}

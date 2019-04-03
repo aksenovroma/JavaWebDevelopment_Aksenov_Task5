@@ -1,0 +1,11 @@
+[Thread-4] - [MOTORBIKE (DIESEL) <6880-2>  fuel=2.0] waiting near fuel column
+[Thread-1] - [MOTORBIKE (GASOLINE) <3983-2>  fuel=2.0] waiting near fuel column
+[Thread-3] - [MOTORBIKE (GASOLINE) <1046-6>  fuel=4.0] waiting near fuel column
+[Thread-2] - [MOTORBIKE (GASOLINE) <9623-4>  fuel=4.0] waiting near fuel column
+[Thread-0] - [MOTORBIKE (GASOLINE) <5837-1>  fuel=3.0] waiting near fuel column
+[Thread-0] - 
+[MOTORBIKE (GASOLINE) <5837-1>  fuel=3.0] left, waiting time is over
+
+[Thread-3] - 
+[MOTORBIKE (GASOLINE) <1046-6>  fuel=4.0] left, waiting time is over
+
