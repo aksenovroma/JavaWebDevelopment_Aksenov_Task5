@@ -12,6 +12,7 @@ public class FuelColumn {
 
     private static final String MESSAGE_DROVE_TO_STATION = " drove to the gas station";
     private static final String MESSAGE_LEFT_STATION = " refueled and left ";
+    private static final String MESSAGE_ERROR = "Illegal sleepTime";
     private static final String NEW_LINE = "\n";
     private static final int DEFAULT_FUEL_TANK_CAPACITY = 100;
     private static final int DEFAULT_FUEL_TANK_FUEL_VOLUME = 0;
@@ -45,11 +46,11 @@ public class FuelColumn {
         if (transport != null) {
             try {
                 TimeUnit.MILLISECONDS.sleep(TIMEOUT_DROVE_TO_STATION);
-                LOGGER.trace(NEW_LINE + this + NEW_LINE + transport.toString() + MESSAGE_DROVE_TO_STATION);
+                LOGGER.info(NEW_LINE + toString() + NEW_LINE + transport.toString() + MESSAGE_DROVE_TO_STATION);
                 Refueller.fuel(transport, fuelTank);
-                LOGGER.trace(transport.toString() + MESSAGE_LEFT_STATION + this);
+                LOGGER.info(transport.toString() + MESSAGE_LEFT_STATION + toString());
             } catch (InterruptedException e) {
-                LOGGER.error(e);
+                LOGGER.error(MESSAGE_ERROR, e);
             }
         }
     }

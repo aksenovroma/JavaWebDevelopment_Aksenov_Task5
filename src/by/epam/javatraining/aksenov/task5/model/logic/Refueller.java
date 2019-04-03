@@ -12,7 +12,7 @@ public class Refueller {
     private static final Logger LOGGER = Logger.getRootLogger();
 
     private static final String MESSAGE_FUEL = "(l) fuel in the tank ";
-    private static final String MESSAGE_FUEL_IS_OVER = "fuel is over, drove away";
+    private static final String MESSAGE_FUEL_IS_OVER = " fuel is over, drove away";
 
     public static void fuel(Transport transport, FuelTank fuelTank) throws InterruptedException{
         while (transport.getFuelTank().checkFuelVolume()) {
@@ -22,7 +22,7 @@ public class Refueller {
                 TimeUnit.MILLISECONDS.sleep(TIMEOUT_FUEL);
                 fuelTank.subFuel();
             } else {
-                LOGGER.trace(transport.toString() + MESSAGE_FUEL_IS_OVER);
+                LOGGER.warn(transport.toString() + MESSAGE_FUEL_IS_OVER);
                 break;
             }
         }

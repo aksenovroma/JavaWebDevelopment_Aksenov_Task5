@@ -7,7 +7,7 @@
         <param name="File" value="log/report.log" />
         <param name="Threshold" value="TRACE" />
         <layout class="org.apache.log4j.PatternLayout" >
-            <param name="ConversionPattern" value="[%t] - %m%n" />
+            <param name="ConversionPattern" value="%m%n" />
         </layout>
     </appender>
 
@@ -15,7 +15,7 @@
         <param name="File" value="log/fuelColumn-report.log" />
         <param name="Threshold" value="TRACE" />
         <layout class="org.apache.log4j.PatternLayout" >
-            <param name="ConversionPattern" value="[%t] - %m%n" />
+            <param name="ConversionPattern" value="%m%n" />
         </layout>
     </appender>
 
@@ -23,7 +23,7 @@
         <param name="File" value="log/transport-report.log" />
         <param name="Threshold" value="TRACE" />
         <layout class="org.apache.log4j.PatternLayout" >
-            <param name="ConversionPattern" value="[%t] - %m%n" />
+            <param name="ConversionPattern" value="%m%n" />
         </layout>
     </appender>
 

@@ -5,20 +5,17 @@ import org.apache.log4j.Logger;
 
 import java.util.Random;
 import java.util.concurrent.TimeUnit;
-import java.util.concurrent.locks.ReentrantLock;
 
-import static properties.ProjectProperties.TIMEOUT_TRANSPORT;
+import static properties.ProjectProperties.*;
 
 public class Transport implements Runnable{
     private static final Logger LOGGER = Logger.getLogger(Transport.class);
-
-    private static final int MIN_WAIT_TIME = 6;
-    private static final int MAX_WAIT_TIME = 8;
 
     private static final String DEFAULT_NUMBER = "1234-5";
     private static final String MESSAGE_WAIT = " waiting near fuel column";
     private static final String MESSAGE_LEFT_NOT_ENOUGH_FUEL = " left, not enough fuel";
     private static final String MESSAGE_LEFT_TIME_IS_OVER = " left, waiting time is over\n";
+    private static final String MESSAGE_ERROR = "Illegal sleepTime";
     private static final String NEW_LINE = "\n";
 
     private String number = DEFAULT_NUMBER;
@@ -27,11 +24,10 @@ public class Transport implements Runnable{
     private int waitTime;
     private FuelTank fuelTank ;
     private GasStation gasStation;
-    private ReentrantLock locker;
 
     public Transport(String number, TransportType transportType,
                      FuelType fuelType, FuelTank fuelTank,
-                     GasStation gasStation, ReentrantLock locker) {
+                     GasStation gasStation) {
         if (number != null) {
             this.number = number;
         }
@@ -41,7 +37,6 @@ public class Transport implements Runnable{
         this.gasStation = gasStation;
         this.transportType = transportType;
         this.fuelType = fuelType;
-        this.locker = locker;
         this.waitTime = MIN_WAIT_TIME + new Random().nextInt(MAX_WAIT_TIME - MIN_WAIT_TIME);
     }
 
@@ -69,27 +64,26 @@ public class Transport implements Runnable{
     @Override
     public void run() {
         LOGGER.trace(toString() + MESSAGE_WAIT);
-
         try {
             FuelColumn fuelColumn = gasStation.getFuelColumnByFuelType(fuelType);
 
-            if (locker.tryLock(waitTime, TimeUnit.SECONDS)) {
+            if (gasStation.getLock().tryLock(waitTime, TimeUnit.SECONDS)) {
                 try {
                     if (!fuelColumn.getFuelTank().isEmpty()) {
                         fuelColumn.add(this);
                     }
-                    TimeUnit.SECONDS.sleep(TIMEOUT_TRANSPORT);
+                    TimeUnit.MILLISECONDS.sleep(TIMEOUT_TRANSPORT);
                 } finally {
-                    locker.unlock();
+                    gasStation.getLock().unlock();
                 }
             } else if (fuelColumn.getFuelTank().isEmpty()){
-                LOGGER.trace(NEW_LINE + toString() + MESSAGE_LEFT_NOT_ENOUGH_FUEL);
+                LOGGER.warn(NEW_LINE + toString() + MESSAGE_LEFT_NOT_ENOUGH_FUEL);
             }
             else {
-                LOGGER.trace(NEW_LINE + toString() + MESSAGE_LEFT_TIME_IS_OVER);
+                LOGGER.info(NEW_LINE + toString() + MESSAGE_LEFT_TIME_IS_OVER);
             }
         } catch (InterruptedException e) {
-            LOGGER.error(e);
+            LOGGER.error(MESSAGE_ERROR, e);
         }
     }
 

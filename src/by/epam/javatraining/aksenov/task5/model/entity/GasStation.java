@@ -5,14 +5,24 @@ import by.epam.javatraining.aksenov.task5.model.exception.GasStationWrongFuelCol
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Objects;
+import java.util.concurrent.locks.ReentrantLock;
 
 public class GasStation {
     private List<FuelColumn> fuelColumns = new LinkedList<>();
+    private ReentrantLock lock = new ReentrantLock();
 
     public GasStation(List<FuelColumn> fuelColumns) {
         if (fuelColumns != null) {
             this.fuelColumns = fuelColumns;
         }
+    }
+
+    public ReentrantLock getLock() {
+        return lock;
+    }
+
+    public void setLock(ReentrantLock lock) {
+        this.lock = lock;
     }
 
     public List<FuelColumn> getFuelColumns() {

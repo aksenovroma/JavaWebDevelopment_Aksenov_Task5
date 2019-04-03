@@ -35,15 +35,13 @@ public class TransportGenerator {
 
             GasStation gasStation = new GasStation(fuelColumns);
 
-            ReentrantLock reentrantLock = new ReentrantLock();
 
             for (int i = 0; i < busCount; i++) {
                 Transport transport = new Transport(getRandomNumber(),
                         transportType,
                         getRandomFuelType(),
                         new FuelTank(transportType.getCapacity(), getRandomFuelVolume()),
-                        gasStation,
-                        reentrantLock);
+                        gasStation);
                 new Thread(transport).start();
             }
         }
