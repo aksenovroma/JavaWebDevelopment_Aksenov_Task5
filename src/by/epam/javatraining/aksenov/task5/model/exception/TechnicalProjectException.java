@@ -1,6 +1,6 @@
 package by.epam.javatraining.aksenov.task5.model.exception;
 
-public class TechnicalProjectException extends BusProjectException {
+public class TechnicalProjectException extends GasStationProjectException {
     public TechnicalProjectException() {
     }
 

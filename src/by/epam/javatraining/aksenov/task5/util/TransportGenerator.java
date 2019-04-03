@@ -6,24 +6,32 @@ import org.apache.log4j.Logger;
 import java.util.*;
 import java.util.concurrent.locks.ReentrantLock;
 
-public class BusGenerator {
+public class TransportGenerator {
     private static final Logger LOGGER = Logger.getRootLogger();
 
     private static TransportType transportType = getRandomTransportType();
-    private static FuelType fuelType = getRandomFuelType();
 
     public static void generate(int busCount) {
         if (busCount > 0) {
             LOGGER.trace("Transport generation");
-            FuelСolumn fuelСolumn = new FuelСolumn(new FuelTank(100, 10), fuelType);
+
+            FuelColumn dieselFuelColumn = new FuelColumn(new FuelTank(100, 10), FuelType.DIESEL);
+            FuelColumn gasolineFuelColumn = new FuelColumn(new FuelTank(100, 10), FuelType.GASOLINE);
+
+            List<FuelColumn> fuelColumns = new LinkedList<>() {
+                {
+                    add(dieselFuelColumn);
+                    add(gasolineFuelColumn);
+                }
+            };
+
+            GasStation gasStation = new GasStation(fuelColumns);
 
             ReentrantLock reentrantLock = new ReentrantLock();
 
             for (int i = 0; i < busCount; i++) {
-                Transport transport = new Transport(getRandomNumber(),
-                        transportType, getRandomFuelType(),
-                        new FuelTank(transportType.getCapacity(), getRandomFuelVolume()),
-                        fuelСolumn, reentrantLock);
+                Transport transport = new Transport(getRandomNumber(), transportType, getRandomFuelType(),
+                        new FuelTank(transportType.getCapacity(), getRandomFuelVolume()), gasStation, reentrantLock);
                 new Thread(transport).start();
             }
         }

@@ -1,25 +1,37 @@
 package by.epam.javatraining.aksenov.task5.model.entity;
 
+import by.epam.javatraining.aksenov.task5.model.exception.FuelTankWrongFuelVolumeException;
+
 import java.util.Objects;
 
 public class FuelTank {
-    private int capacity;
-    private int fuelVolume;
+    private static final double DEFAULT_CAPACITY = 1.0;
+    private static final double DEFAULT_FUEL_VOLUME = 0.0;
 
-    public FuelTank(int capacity, int fuelVolume) {
-        this.capacity = capacity;
-        this.fuelVolume = fuelVolume;
+    private double capacity = DEFAULT_CAPACITY;
+    private double fuelVolume = DEFAULT_FUEL_VOLUME;
+
+    public FuelTank(double capacity, double fuelVolume) {
+        if (capacity > 0) {
+            this.capacity = capacity;
+        }
+        if (fuelVolume >= 0) {
+            this.fuelVolume = fuelVolume;
+        }
     }
 
-    public int getCapacity() {
+    public double getCapacity() {
         return capacity;
     }
 
-    public int getFuelVolume() {
+    public double getFuelVolume() {
         return fuelVolume;
     }
 
-    public void setFuelVolume(int fuelVolume) {
+    public void setFuelVolume(int fuelVolume) throws FuelTankWrongFuelVolumeException{
+        if (fuelVolume < 0) {
+            throw new FuelTankWrongFuelVolumeException();
+        }
         this.fuelVolume = fuelVolume;
     }
 

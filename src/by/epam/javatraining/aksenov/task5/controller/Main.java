@@ -1,10 +1,10 @@
 package by.epam.javatraining.aksenov.task5.controller;
 
-import by.epam.javatraining.aksenov.task5.util.BusGenerator;
+import by.epam.javatraining.aksenov.task5.util.TransportGenerator;
 
 public class Main {
     public static void main(String[] args) {
-        BusGenerator.generate(5);
+        TransportGenerator.generate(5);
     }
 }
 
